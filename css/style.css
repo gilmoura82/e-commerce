@@ -1,0 +1,442 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+
+/*Sessão Menu*/
+
+.section.menu {
+    display:flex;
+}
+
+
+
+.menu__list {
+    display:flex;
+    justify-content: flex-end;
+    margin:auto;
+}
+
+.nome {  
+    margin:10px;
+    margin-right: 500px;
+}
+
+.menu__list__item {
+    margin:10px;
+    transition: linear 400ms;
+}
+
+.menu__list__item a:hover {
+    transition: linear 400ms;
+    color:darkturquoise;
+}
+
+/*Sessão Skills*/
+
+.skills h3 {
+    text-align: center;
+}
+
+.skills__line {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill__name {
+    width:1600px;
+}
+
+.skills__box {
+        border-radius: 3px;
+        box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+        padding: 5px;
+        margin: 5px;
+        width: 150px;
+        transition: all 0.3s ease-out;
+ 
+}
+
+.skills__box:hover {
+    background-color:#b1b2b3;
+    color:#FFF;
+}
+
+/*Sessão Title*/
+
+section.title{
+
+}
+
+/*Sessão About*/
+
+.about {
+    display:flex;
+}
+
+
+.title__div {
+    display: flex;
+}
+
+
+
+.title__profile {
+    margin-left:630px;
+    border-radius:50%;  
+}
+
+
+
+.title__bio, .title__subsection  {
+    text-align: center;
+}
+
+.title__network  {
+    display:flex;
+    justify-content: space-around;
+    margin:auto;
+    width:800px;
+}
+
+
+.title__network a {
+    transition: linear 400ms;
+}
+
+.title__network a:hover {
+    transition: linear 400ms;
+    color:darkturquoise;
+}
+
+.about__title {
+    text-align: center;
+}
+.about__paragraph{
+    margin-left:40px;
+}
+
+
+.about__paragraph a {
+    transition: linear 400ms;
+}
+
+.about__paragraph a:hover {
+    color: darkturquoise;
+}
+
+
+/*Sessão Hobbies*/
+
+.hobbies__line {
+    display: flex;
+    justify-content:space-around;
+}
+
+.hobbies__title {
+    text-align: center;
+}
+
+.hobbies__box {
+        border-radius: 5px;
+        box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        transition: all 0.3s ease-out;
+}
+
+.hobbies__box:hover {
+    background-color:darkturquoise;
+    color:#FFF;
+}
+
+
+
+/* Experiência Acadêmica*/
+
+
+#formacao {
+    text-align: center;
+}
+
+.academic__courses {
+    display:flex;
+    justify-content:space-around;
+}
+
+.academic__courses__box {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    transition: all 0.3s ease-out;
+}
+
+.academic__courses__box:hover {
+    background-color:darkturquoise;
+    color:#FFF;
+}
+
+
+/* experiência*/
+
+#xp {
+    text-align: center;
+}
+
+.experiencie__box{
+    display:flex;
+    justify-content: center ;   
+}
+
+.experience__info {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    width: 500px;
+    height:150px;
+    transition: all 0.3s ease-out;
+}
+
+.experience__title, .experience__text   {
+    display:flex;
+    justify-content: center;
+    margin-left:20px;
+}
+
+.experience__repo button, .experience__demo button {
+    margin-left:100px;
+    justify-content: center;
+}
+
+.experience__repo button {
+    height:30px;
+    background-color: darkgrey;
+    border:none;
+    border-radius:5px;
+    width:100px;
+    transition: linear 400ms;
+}
+
+.experience__repo button:hover {
+    background-color:steelblue;
+    color:#FFF;
+    cursor:pointer;
+}
+
+.experience__demo button {
+    height:30px;
+    background-color: darkgrey;
+    border:none;
+    border-radius:5px;
+    width:100px;
+    transition: linear 400ms;
+}
+
+.experience__demo button:hover {
+    background-color:steelblue;
+    color:#FFF;
+    cursor:pointer;
+}
+
+
+/*Contato*/
+
+.formcontato__contacto {
+    display:flex;
+}
+
+.formcontato__text {
+    margin:auto;
+}
+
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    margin:auto;
+}
+
+.formcontato__text {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    width: 700px;
+    height:430px;
+    transition: all 0.3s ease-out;
+    margin:auto;
+}
+
+.formcontato__input {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #000;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    border-bottom: 1px solid steelblue;
+    background:none;
+    
+}
+
+.formcontato__textarea {
+    border:1px solid steelblue;
+    background:none;
+}
+
+.formcontato__botao {
+    height:30px;
+    background-color: darkgrey;
+    border:none;
+    border-radius:5px;
+    width:400px;
+    transition: linear 400ms;
+}
+
+.formcontato__botao:hover {
+    background-color:steelblue;
+    color:#FFF;
+    cursor:pointer;
+}
+    
+
+/*footeer*/
+
+section.footer{
+    text-align: center;
+    font-weight: bold;
+   
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+
+/*Mobile*/
+@media only screen and (max-width: 425px) {
+
+
+
+/*Menu*/
+.menu__list {
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Titulo*/
+
+.title {
+    flex-direction: column;
+}
+
+.title__profile {
+    margin-left:180px;
+}
+
+.title__bio, .title__subsection {
+    display:flex;
+    width:250px;
+    justify-content: center;
+    margin-left:100px;
+}
+
+.title__network {
+    justify-content: space-around;
+    width:380px;
+}
+
+/*Sessão sobre*/
+
+.about__paragraph {
+    width:350px;
+}
+
+.about__title {
+    text-align: center;;
+}
+
+/*Skills*/
+
+.skills__line {
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__box {
+    width:300px;
+}
+
+/*Hobbies*/
+
+.hobbies__line {
+    flex-direction: column;
+    align-items: center;
+}
+
+ 
+/*Formação Acadêmica*/
+
+.academic__courses {
+    flex-direction: column;
+    align-items: center;
+}
+
+.academic__courses__box {
+    width:300px;
+    height:150px;
+    padding:0;
+    margin:5px;
+}
+
+/*Experiência Profissional*/
+
+.experiencie__box {
+     width:300px;              
+
+}
+
+.experience__title, .experience__text {
+    width:280px;
+    font-size: 17px;
+}
+
+.experience__img {
+    width:110px;
+    margin-left:100px;
+}
+
+.experience__repo button, .experience__demo button {
+   margin-left: 40px;
+   justify-content: space-around;
+   align-items: center;
+}
+
+
+ /*Contato*/
+
+
+
+/*Footer*/
