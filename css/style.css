@@ -198,8 +198,13 @@ section.title{
 }
 
 .academic__courses__box:hover {
-    background-color:darkturquoise;
-    color:#FFF;
+    
+    color:darkturquoise;
+    
+}
+
+.academic__courses__item__img {
+    align-items: center;
 }
 
 
