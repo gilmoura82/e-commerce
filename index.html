@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Folha de estilo de CSS Linkado -->
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,7 +187,6 @@
             
             <div class="academic__courses__box">
                 <ul class="academic__courses__list">
-                    <!-- Insira a logo de seu local de formação -->
                     <li class="academic__courses__item__img"><img src=""></li>
                     <li class="academic__courses__item__title"><h4>Análise de Sistemas</h4></li>
                     <li class="academic__courses__item__subtitle"><p>UNINOVE - 2020</p></li>
@@ -198,7 +195,6 @@
 
             <div class="academic__courses__box">
               <ul class="academic__courses__list">
-                  <!-- Insira a logo de seu local de formação -->
                   <li class="academic__courses__item__img"><img src=""></li>
                   <li class="academic__courses__item__title"><h4>Next Education ONE T3</h4></li>
                   <li class="academic__courses__item__subtitle"><p>Alura | ORACLE</p></li>
@@ -207,7 +203,6 @@
 
           <div class="academic__courses__box">
             <ul class="academic__courses__list">
-                <!-- Insira a logo de seu local de formação -->
                 <li class="academic__courses__item__img"><img src=""></li>
                 <li class="academic__courses__item__title"><h4>Java Fullstack</h4></li>
                 <li class="academic__courses__item__subtitle"><p>JDev Treinamentos</p></li>
@@ -216,7 +211,6 @@
 
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
               <li class="academic__courses__item__img"><img src=""></li>
               <li class="academic__courses__item__title"><h4>Java Developer</h4></li>
               <li class="academic__courses__item__subtitle"><p>Digital Innovation One</p></li>
@@ -225,7 +219,6 @@
 
         <div class="academic__courses__box">
           <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
               <li class="academic__courses__item__img"><img src=""></li>
               <li class="academic__courses__item__title"><h4>Java Orientado A Objetos</h4></li>
               <li class="academic__courses__item__subtitle"><p>Nélio Alves - Udemy</p></li>
@@ -241,13 +234,11 @@
     <section class="experience">
         
         <div class="experiencie__box">
-            <!-- Insira a logo/captura de seu projeto/trabalho -->
             <img class="experience__img" src="imagens/encriptador.png" height="150" width="200" >
             <div class="experience__info">
                 <h3 class="experience__title">Decodificador de Textos</h3>
                 <h3 class="experience__text">Challenge Alura </h3>
                     <div class="experience__description">
-                        <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/gilmoura82/encriptador" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
                             <span class="experience__demo"><a href="https://gilmoura82.github.io/encriptador/" target="_blank"><button class="experiencia__botao--demo">Página</button></a></span>
                     </div>
@@ -256,13 +247,11 @@
         <br/>
 
         <div class="experiencie__box">
-          <!-- Insira a logo/captura de seu projeto/trabalho -->
           <img class="experience__img" src="imagens/barbearia.png" height="150" width="200">
           <div class="experience__info">
               <h3 class="experience__title">Barbearia Alura</h3>
               <h3 class="experience__text">Challenge Oracle </h3>
                   <div class="experience__description">
-                      <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                           <span class="experience__repo"><a href="https://github.com/gilmoura82/barbearia" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
                           <span class="experience__demo"><a href="https://gilmoura82.github.io/barbearia/" target="_blank"><button class="experiencia__botao--demo">Página</button></a></span>
                   </div>
@@ -270,13 +259,11 @@
       </div>  
 
       <div class="experiencie__box">
-        <!-- Insira a logo/captura de seu projeto/trabalho -->
         <img class="experience__img" src="imagens/7daysofcode.png" height="150" width="200">
         <div class="experience__info">
             <h3 class="experience__title">Projeto 7 Days Of Code</h3>
             <h3 class="experience__text">Imersão Alura 2022 </h3>
                 <div class="experience__description">
-                    <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                         <span class="experience__repo"><a href="https://github.com/gilmoura82/semana7daysofcode" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
                         <span class="experience__demo"><a href="https://gilmoura82.github.io/semana7daysofcode/" target="_blank"><button class="experiencia__botao--demo">Página</button></a></span>
                 </div>
@@ -295,9 +282,10 @@
                     <h3 class="formcontato__subtext">Preencha o formulário abaixo e entrarei em contato o mais rápido possível. </h3>
                       <form class="formcontato__form">
                         <input class="formcontato__input" type="text" id="nome" placeholder="Nome" required><br/>
-                        <input class="formcontato__input" type="email" id="email" placeholder="Email"><br/>
-                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto"><br/>
-                        <textarea class="formcontato__textarea" rows="8" cols="40" id="mensagem" name="mensagem" placeholder="Sua mensagem"></textarea><br>
+                        <input class="formcontato__input" type="email" id="email" placeholder="Email" required><br/>
+                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto" required><br/>
+                        <textarea class="formcontato__textarea" rows="8" cols="40" onkeyup="limite_textarea(this.value)" id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+                        <span id="cont" title="A mensagem não poderá ser enviada caso esse limite seja excedido">300</span>Caracteres Restantes <br/><br/>
                         <button class="formcontato__botao" onclick="validaCampos()">Enviar mensagem</button>
 
                     </form>
@@ -372,9 +360,6 @@
   }, 1000 / 60); // 60 fps
 };
     </script>
-
-
-    
 
 </body>
 </html>
