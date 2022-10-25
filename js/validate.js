@@ -6,21 +6,35 @@ function validaCampos() {
   const mensagem = document.querySelector("#mensagem");
   
 
+
+
   if (document.querySelector("#nome").value.length > 50) {
     alert("Campo nome não pode ter mais de 50 caracteres");
-    document.getElementById("nome").focus();
-  } else if (document.getElementById("email").value.length > 50) {
+    document.querySelector("#nome").focus();
+    nome.value = "";
+  } 
+  
+  if (document.getElementById("email").value.length > 50) {
     alert("Campo e-mail não pode ter mais de 50 caracteres");
     document.getElementById("email").focus();
-  } else if (document.getElementById("assunto").value.length > 50) {
+    email.value = "";
+  } 
+  
+  if (document.getElementById("assunto").value.length > 50) {
     alert("Campo assunto não pode ter mais de 50 caracteres");
     document.getElementById("assunto").focus();
+    assunto.value = "";
   } 
 
-  if (!nome == "" && !email == "" && !assunto == "" && !mensagem == "" ) {
+
+  if (nome =! "" && email != "" && assunto != "" && mensagem != "") {
     validaMensagem();
-    return false
   }
+  
+  
+
+  
+  
  
 }
 
