@@ -27,15 +27,12 @@ function validaCampos() {
   } 
 
 
-  if (nome =! "" && email != "" && assunto != "" && mensagem != "") {
+  if (nome.value == "" && email.value == "" && assunto.value == "" && mensagem.value == "") {
+    alert("Preencha os campos para enviar a mensagem"); 
+  } else {
     validaMensagem();
   }
   
-  
-
-  
-  
- 
 }
 
 // Envia a mensagem seguindo as regras de negócio e mostra os dados transmitidos
