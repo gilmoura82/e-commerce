@@ -1,62 +1,44 @@
 function validaCampos() {
 
-  let nome = document.querySelector("#nome");
-  let email = document.querySelector("#email");
-  let assunto = document.querySelector("#assunto");
-  let mensagem = document.querySelector("#mensagem");
+  const nome = document.querySelector("#nome");
+  const email = document.querySelector("#email");
+  const assunto = document.querySelector("#assunto");
+  const mensagem = document.querySelector("#mensagem");
   
 
-if (document.getElementById("nome").value.length > 50) {
-  alert("Campo nome não pode ter mais de 50 caracteres");
-  document.getElementById("nome").focus();
-} 
+  if (document.querySelector("#nome").value.length > 50) {
+    alert("Campo nome não pode ter mais de 50 caracteres");
+    document.getElementById("nome").focus();
+  } else if (document.getElementById("email").value.length > 50) {
+    alert("Campo e-mail não pode ter mais de 50 caracteres");
+    document.getElementById("email").focus();
+  } else if (document.getElementById("assunto").value.length > 50) {
+    alert("Campo assunto não pode ter mais de 50 caracteres");
+    document.getElementById("assunto").focus();
+  } 
 
-if (document.getElementById("email").value.length > 50) {
-  alert("Campo e-mail não pode ter mais de 50 caracteres");
-  document.getElementById("email").focus();
-} 
-
-if (document.getElementById("assunto").value.length > 50) {
-  alert("Campo assunto não pode ter mais de 50 caracteres");
-  document.getElementById("assunto").focus();
-}
-
-if (document.getElementById("mensagem").value.length > 300) {
-  alert("Campo e-mail não pode ter mais de 300 caracteres");
-  document.getElementById("mensagem").focus();
-}
-
-/*
-if (document.getElementById("nome").value == "") {
-  alert("Campo nome não pode ser vazio");
-  document.getElementById("nome").focus();
-} 
-
-if (document.getElementById("email").value == "") {
-  alert("Campo e-mail não pode ser vazio");
-  document.getElementById("email").focus();
-} 
-
-if (document.getElementById("assunto").value == "") {
-  alert("Campo assunto não pode ser vazio");
-  document.getElementById("assunto").focus();
-} 
-
-if (document.getElementById("mensagem").value == "") {
-  alert("Campo mensagem não pode ser vazio");
-  document.getElementById("mensagem").focus();
-} 
-
-*/
-if (nome.value == "" && email.value == "" && assunto.value == "" && mensagem.value == "") {
-  alert("Preencha todos os campos");
-  document.getElementById("nome").focus();
-} else {  
-    alert("Email Enviado Com Sucesso!!!" + "\n");
-    alert("Dados Enviados: " + "\n" + "Nome: " + nome.value + "\n" + "E-mail: " + email.value + "\n" + "Assunto: " + assunto.value + "\n" + "Mensagem: " + mensagem.value);
-}
-
-
-
+  if (!nome == "" && !email == "" && !assunto == "" && !mensagem == "" ) {
+    validaMensagem();
+    return false
+  }
  
+}
+
+// Envia a mensagem seguindo as regras de negócio e mostra os dados transmitidos
+function validaMensagem() {
+  alert("Email Enviado Com Sucesso!!!" + "\n");
+  alert("Dados Enviados: " + "\n" + "Nome: " + nome.value + "\n" + "E-mail: " + email.value + "\n" + "Assunto: " + assunto.value + "\n" + "Mensagem: " + mensagem.value);
+}
+
+
+// Mostra o limite de caracteres da mensagem
+function limite_textarea(valor) {
+  quant = 300;
+  total = valor.length;
+  if(total <= quant) {
+      resto = quant - total;
+      document.getElementById('cont').innerHTML = resto;
+  } else {
+      document.getElementById('mensagem').value = valor.substr(0,quant);
+  }
 }
