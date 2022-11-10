@@ -6,8 +6,6 @@ function validaCampos() {
   const mensagem = document.querySelector("#mensagem");
   
 
-
-
   if (document.querySelector("#nome").value.length > 50) {
     alert("Campo nome não pode ter mais de 50 caracteres");
     document.querySelector("#nome").focus();
@@ -26,12 +24,9 @@ function validaCampos() {
     assunto.value = "";
   } 
 
-
-  if (nome.value == "" && email.value == "" && assunto.value == "" && mensagem.value == "") {
-    alert("Preencha os campos para enviar a mensagem"); 
-  } else {
+  if (nome.value != "" && email.value != "" && assunto.value != "" && mensagem.value != "") {
     validaMensagem();
-  }
+  } 
   
 }
 
