@@ -47,11 +47,11 @@ a{
 
 .menu__list__item {
     margin:10px;
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .menu__list__item a:hover {
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
     color:darkturquoise;
 }
 
@@ -81,8 +81,9 @@ a{
 }
 
 .skills__box:hover {
-    background-color:#b1b2b3;
-    color:#FFF;
+    color:darkturquoise;
+    transition: all 0.3s ease-out;
+
 }
 
 /*Sessão Title*/
@@ -102,14 +103,10 @@ section.title{
     display: flex;
 }
 
-
-
 .title__profile {
     margin-left:630px;
     border-radius:50%;  
 }
-
-
 
 .title__bio, .title__subsection  {
     text-align: center;
@@ -122,13 +119,12 @@ section.title{
     width:800px;
 }
 
-
 .title__network a {
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .title__network a:hover {
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
     color:darkturquoise;
 }
 
@@ -139,15 +135,13 @@ section.title{
     margin-left:40px;
 }
 
-
 .about__paragraph a {
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .about__paragraph a:hover {
     color: darkturquoise;
 }
-
 
 /*Sessão Hobbies*/
 
@@ -170,11 +164,8 @@ section.title{
 }
 
 .hobbies__box:hover {
-    background-color:darkturquoise;
-    color:#FFF;
+    color:darkturquoise;
 }
-
-
 
 /* Experiência Acadêmica*/
 
@@ -198,7 +189,6 @@ section.title{
 }
 
 .academic__courses__box:hover {
-    
     color:darkturquoise;
     
 }
@@ -231,8 +221,21 @@ section.title{
     display:flex;
     justify-content: center;
     margin-left:20px;
+    transition: all 0.3s ease-out;
 }
 
+.experience__info:hover {
+    color:darkturquoise;
+}
+
+strong {
+    transition: all 0.3s ease-out;
+}
+
+strong:hover {
+    color: darkturquoise;
+    cursor:pointer;
+}
 .experience__repo button, .experience__demo button {
     margin-left:100px;
     justify-content: center;
@@ -244,7 +247,7 @@ section.title{
     border:none;
     border-radius:5px;
     width:100px;
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .experience__repo button:hover {
@@ -259,24 +262,27 @@ section.title{
     border:none;
     border-radius:5px;
     width:100px;
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .experience__demo button:hover {
     background-color:steelblue;
     color:#FFF;
     cursor:pointer;
+    transition: all 0.3s ease-out;
+
 }
 
 
 /*Contato*/
 
+
 .formcontato__contacto {
     display:flex;
 }
 
-.formcontato__text {
-    margin:auto;
+.formcontato__text .formcontato__title, .formcontato__subtext {
+    text-align: center;
 }
 
 .formcontato__form {
@@ -318,7 +324,7 @@ section.title{
     border:none;
     border-radius:5px;
     width:400px;
-    transition: linear 400ms;
+    transition: all 0.3s ease-out;
 }
 
 .formcontato__botao:hover {
@@ -328,7 +334,7 @@ section.title{
 }
 
 
-/*footeer*/
+/*footer*/
 
 section.footer{
     text-align: center;
@@ -341,7 +347,7 @@ utilize como referência os breakpoints @media abaixo*/
 
 
 /*Mobile*/
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 505px) {
 
 
 
@@ -355,17 +361,19 @@ utilize como referência os breakpoints @media abaixo*/
 
 .title {
     flex-direction: column;
+  
 }
 
 .title__profile {
-    margin-left:180px;
+    display: flex;
+    margin-left:220px;
 }
 
 .title__bio, .title__subsection {
     display:flex;
     width:250px;
     justify-content: center;
-    margin-left:100px;
+    margin-left:130px;
 }
 
 .title__network {
@@ -377,10 +385,13 @@ utilize como referência os breakpoints @media abaixo*/
 
 .about__paragraph {
     width:350px;
+    text-align: center;
+    margin-left: 70px;
 }
 
 .about__title {
-    text-align: center;;
+    text-align: center;
+    margin-left: 70px;
 }
 
 /*Skills*/
@@ -414,12 +425,14 @@ utilize como referência os breakpoints @media abaixo*/
     height:150px;
     padding:0;
     margin:5px;
+    margin-left:30px;
 }
 
 /*Experiência Profissional*/
 
 .experiencie__box {
-     width:300px;              
+     width:300px;  
+     margin-left:30px;            
 
 }
 
@@ -430,7 +443,8 @@ utilize como referência os breakpoints @media abaixo*/
 
 .experience__img {
     width:110px;
-    margin-left:100px;
+    margin-left:130px;
+
 }
 
 .experience__repo button, .experience__demo button {
@@ -442,6 +456,8 @@ utilize como referência os breakpoints @media abaixo*/
 
  /*Contato*/
 
-
+ .formcontato__text {
+    height:480px;
+ }
 
 /*Footer*/
